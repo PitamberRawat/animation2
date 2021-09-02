@@ -1,0 +1,150 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+section{
+    background: #002;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+div{
+    transition: 1s;
+}
+div:hover{
+    transition: 0;
+    background-color:rgba(255,255,255,0.03); 
+    border: 3.6px solid #0f0;  
+    text-shadow: 0 0 120px #0f0;
+}
+.bubble1{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    overflow: hidden;
+    transform: translate(-50%,-50%);
+    height: 350px;
+    width: 350px;
+    border-radius:50% 70% 50% 30% / 51% 34% 66% 49% ;
+    background: rgba(255,255,255,0.07);
+}
+.bubble2{
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    overflow: hidden;
+    transform: translate(-50%,-50%);
+    height: 650px;
+    width: 650px;
+    border-radius:50%  ;
+    z-index: 1;
+    background: rgba(255,255,255,0.07);
+    animation: animate2 18s linear infinite alternate;
+}
+@keyframes animate2{       
+    50%{
+        transform: rotate(24deg);   
+    }
+    100%{
+        border-radius: 0% 100% 0% 100% / 51% 34% 66% 49% ;
+    }
+}
+.bubble3{
+    position: absolute;
+    top: 0%;
+    right: -10%;
+    transform: translate(-50%,-50%);
+    height: 430px;
+    width: 430px;
+    overflow: hidden;
+    border-radius:50% 50% 74% 26% / 51% 34% 66% 49% ;
+    background: rgba(255,255,255,0.07);
+    animation: animate3 8s linear infinite alternate-reverse;
+}
+@keyframes animate3{
+    0%{
+        transform: rotate(360deg);
+    }
+    100%{
+        border-radius: 21% 79% 45% 55% / 79% 23% 77% 21%  ;
+    }
+}
+.bubble4{
+    position: absolute;
+    bottom:50%;
+    right: 50%;
+    transform: translate(-50%,-50%);
+    height: 400px;
+    width: 400px;
+    overflow: hidden;
+    border-radius:90% 60% 14% 46% / 51% 34% 66% 49% ;
+    background: rgba(255,255,255,0.07);
+    animation: animate4 8s linear infinite alternate-reverse;
+}
+@keyframes animate4{
+    0%{
+        transform: rotate(200deg);
+    }
+    100%{
+        border-radius: 80% 45% 65% 15% / 79% 23% 77% 21%  ;
+    }
+}
+.bubble5{
+    position: absolute;
+    bottom:0%;
+    right: 10%;
+    transform: translate(-50%,-50%);
+    height: 200px;
+    width: 210px;
+    overflow: hidden;
+    border-radius: 81% 50% 21% 62% / 51% 34% 66% 49% ;
+    background: rgba(255,255,255,0.07);
+    animation: animate4 8s linear infinite alternate-reverse;
+}
+@keyframes animate4{
+    0%{
+        transform: rotate(200deg);
+    }
+    100%{
+        border-radius: 30% 0% 71% 32% / 79% 23% 77% 21%  ;
+    }
+}
+.bubble6{
+    position: absolute;
+    top:60%;
+    right: 30%;
+    transform: translate(-50%,-50%);
+    height: 500px;
+    width: 500px;
+    overflow: hidden;
+    border-radius:30% 90% 120% 15% / 51% 34% 66% 49% ;
+    background: rgba(255,255,255,0.07);
+    animation: animate4 8s linear infinite alternate-reverse;
+}
+@keyframes animate4{
+    0%{
+        transform: rotate(200deg);
+    }
+    100%{
+        border-radius: 35% 129% 10% 99% / 79% 23% 77% 21%  ;
+    }
+}
+@media(min-width:900px){
+    .bubble2{
+        width: 780px;
+        height: 780px;
+    }
+}
+@media(min-width:700px){
+    .bubble2{
+        width: 730px;
+        height: 730px;
+    }
+}
+@media(min-width:500px){
+    .bubble2{
+        width: 680px;
+        height: 680px;
+    }
+}
